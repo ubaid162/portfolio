@@ -1,4 +1,4 @@
-import { Download, Mail, Github, Linkedin, Sparkles } from "lucide-react";
+import { Download, Mail, Github, Linkedin, Sparkles, Instagram } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const roles = [
@@ -93,7 +93,7 @@ const Hero = () => {
             </button>
 
             <a
-              href="/Mahammad_Ubaid_Resume.pdf"
+              href="Public/Resume(DA).pdf"
               download
               className="px-8 py-4 bg-white/5 backdrop-blur border border-white/10 rounded-xl text-white font-semibold hover:bg-white/10 hover:scale-105 transition-all flex items-center gap-2"
             >
@@ -105,9 +105,11 @@ const Hero = () => {
           {/* Social Icons */}
           <div className="flex gap-4 justify-center lg:justify-start">
             {[
-              { icon: Mail, link: "mailto:your.email@example.com" },
-              { icon: Github, link: "https://github.com" },
-              { icon: Linkedin, link: "https://linkedin.com" },
+              { icon: Mail, link: "mailto:mahammadubaid162@gmail.com" },
+              { icon: Github, link: "https://github.com/ubaid162" },
+              { icon: Linkedin, link: "https://www.linkedin.com/in/mahammad-ubaidulla/" },
+              { icon: Instagram, link: "https://www.instagram.com/ubaiiddd.__?igsh=MXV5NmQzNXh4Z3U2ZQ==" },
+
             ].map(({ icon: Icon, link }, i) => (
               <a
                 key={i}
@@ -127,7 +129,7 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-blue-500/30 blur-2xl rounded-full"></div>
             <img
-              src="/profile.jpg"
+              src="Public/Me.jpg"
               alt="Mahammad Ubaid"
               className="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl object-cover border border-white/10 shadow-2xl"
             />

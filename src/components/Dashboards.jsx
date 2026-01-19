@@ -10,6 +10,16 @@ import {
 const Dashboards = () => {
   const dashboards = [
     {
+      title: "Hospital Operations Dashboard",
+      description:
+        "Monitored patient flow, department utilization, and operational KPIs to support healthcare planning.",
+      icon: HeartPulse,
+      image:
+        "https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=800",
+      tools: ["Power BI", "Excel"],
+      github: "https://github.com/ubaid162/Hospital-PowerBI-Dashboard",
+    },
+    {
       title: "Blinkit Sales Dashboard",
       description:
         "Analyzed sales performance, order trends, and category-wise contribution to support retail decision-making.",
@@ -17,7 +27,7 @@ const Dashboards = () => {
       image:
         "https://images.pexels.com/photos/590045/pexels-photo-590045.jpeg?auto=compress&cs=tinysrgb&w=800",
       tools: ["Power BI", "Excel", "SQL"],
-      github: "https://github.com/yourusername/blinkit-sales-dashboard",
+      github: "https://github.com/ubaid162/Blinkit-PowerBI-Dashboard",
     },
     {
       title: "Zephyr Sales & HR Dashboard",
@@ -27,7 +37,7 @@ const Dashboards = () => {
       image:
         "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800",
       tools: ["Power BI", "Excel"],
-      github: "https://github.com/yourusername/zephyr-sales-hr-dashboard",
+      github: "https://github.com/ubaid162/Zephyr-Technologies---HR-Analytics-Sales-Performance-Dashboard",
     },
     {
       title: "Global Chocolate Sales Dashboard",
@@ -39,16 +49,7 @@ const Dashboards = () => {
       tools: ["Power BI", "DAX"],
       github: "https://github.com/yourusername/chocolate-sales-dashboard",
     },
-    {
-      title: "Hospital Operations Dashboard",
-      description:
-        "Monitored patient flow, department utilization, and operational KPIs to support healthcare planning.",
-      icon: HeartPulse,
-      image:
-        "https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tools: ["Power BI", "Excel"],
-      github: "https://github.com/yourusername/hospital-dashboard",
-    },
+    
     {
       title: "Financial Market Analysis Dashboard",
       description:
@@ -128,19 +129,23 @@ const Dashboards = () => {
 
               {/* GitHub Link */}
               <div className="px-6 pb-6">
-                <a
-                  href={dashboard.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    inline-flex items-center gap-2 text-sm font-medium
-                    text-slate-400 hover:text-white transition
-                  "
-                >
-                  <Github size={18} />
-                  View on GitHub
-                </a>
-              </div>
+  <a
+    href={dashboard.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      inline-flex items-center gap-2 px-4 py-2
+      bg-white/5 border border-white/10 rounded-lg
+      text-sm font-medium text-slate-400
+      hover:text-white hover:bg-white/10 hover:border-blue-500/40
+      transition-all duration-300
+    "
+  >
+    <Github size={18} />
+    GitHub
+  </a>
+</div>
+
             </div>
           ))}
         </div>

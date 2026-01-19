@@ -1,12 +1,9 @@
 import {
-  ExternalLink,
   Github,
   TrendingUp,
   Shield,
   Home,
-  GraduationCap,
   Activity,
-  Briefcase,
   DollarSign,
 } from "lucide-react";
 
@@ -20,6 +17,7 @@ const Projects = () => {
       tags: ["Python", "Pandas", "Scikit-learn", "Classification"],
       image:
         "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
+      github: "https://github.com/ubaid162/Customer_Churn_Prediction.git",
     },
     {
       title: "UPI Fraud Detection",
@@ -29,6 +27,7 @@ const Projects = () => {
       tags: ["Python", "Machine Learning", "Classification"],
       image:
         "https://images.pexels.com/photos/6771985/pexels-photo-6771985.jpeg?auto=compress&cs=tinysrgb&w=800",
+      github: "https://github.com/ubaid162/UPI-Fraud-Detection-Web-App-Flask-Machine-Learning",
     },
     {
       title: "House Price Prediction",
@@ -38,8 +37,8 @@ const Projects = () => {
       tags: ["Python", "Regression", "Feature Engineering"],
       image:
         "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800",
+      github: "https://github.com/ubaid162/Hosse_price_prediction",
     },
-    
     {
       title: "Kidney Stone Detection",
       description:
@@ -48,27 +47,19 @@ const Projects = () => {
       tags: ["Python", "Data Analysis", "Healthcare"],
       image:
         "https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=800",
+      github: "https://github.com/ubaid162/project-placeholder",
     },
     
     {
-      title: "Stock Price Analysis & Prediction",
+      title: "Telecom Customer Churn Prediction",
       description:
-        "Time-series based analysis to study stock trends and support data-driven investment insights.",
-      icon: DollarSign,
-      tags: ["Python", "Time Series", "Data Analysis"],
+        "Analyzed telecom customer data to predict churn and identify key factors influencing customer retention.",
+      icon: TrendingUp,
+      tags: ["Python", "EDA", "Classification", "Customer Analytics"],
       image:
-        "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/8866792/pexels-photo-8866792.jpeg?auto=compress&cs=tinysrgb&w=800",
+      github: "https://github.com/ubaid162/Customer_Churn_Prediction.git",
     },
-    {
-  title: "Telecom Customer Churn Prediction",
-  description:
-    "Analyzed telecom customer data to predict churn and identify key factors influencing customer retention.",
-  icon: TrendingUp,
-  tags: ["Python", "EDA", "Classification", "Customer Analytics"],
-  image:
-    "https://images.pexels.com/photos/8866792/pexels-photo-8866792.jpeg?auto=compress&cs=tinysrgb&w=800",
-},
-
   ];
 
   return (
@@ -86,6 +77,7 @@ const Projects = () => {
           </p>
         </div>
 
+        {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
@@ -122,7 +114,7 @@ const Projects = () => {
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-5">
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
@@ -133,17 +125,21 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Actions */}
-                <div className="flex gap-3">
-                  <button className="flex-1 px-4 py-2 bg-blue-500 rounded-lg text-white text-sm font-medium hover:bg-blue-600 transition">
-                    <ExternalLink size={16} className="inline mr-2" />
-                    Details
-                  </button>
-
-                  <button className="p-2 bg-white/5 border border-white/10 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition">
-                    <Github size={18} />
-                  </button>
-                </div>
+                {/* GitHub */}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    inline-flex items-center gap-2 px-4 py-2
+                    bg-white/5 border border-white/10 rounded-lg
+                    text-slate-400 hover:text-white hover:bg-white/10
+                    transition
+                  "
+                >
+                  <Github size={18} />
+                  <span className="text-sm">GitHub</span>
+                </a>
               </div>
             </div>
           ))}

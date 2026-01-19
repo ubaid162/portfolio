@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { Mail, Linkedin, Github, MapPin, Send, Phone } from "lucide-react";
+import {
+  Mail,
+  Linkedin,
+  Github,
+  MapPin,
+  Send,
+  Phone,
+  Instagram,
+} from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +22,17 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thanks for reaching out! You can also contact me directly via email or LinkedIn.");
+
+    alert(
+      "Thanks for reaching out! You can also contact me directly via email or LinkedIn."
+    );
+
+    // Clear form after submit
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   const contactInfo = [
@@ -40,24 +58,25 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: Linkedin,
-      label: "LinkedIn",
       link: "https://www.linkedin.com/in/mahammad-ubaidulla/",
     },
     {
       icon: Github,
-      label: "GitHub",
       link: "https://github.com/ubaid162",
     },
     {
       icon: Mail,
-      label: "Email",
       link: "mailto:mahammadubaid162@gmail.com",
+    },
+    {
+      icon: Instagram,
+      link: "https://www.instagram.com/ubaiiddd.__?igsh=MXV5NmQzNXh4Z3U2ZQ==",
     },
   ];
 
   return (
     <section id="contact" className="py-24 relative bg-slate-950">
-      {/* subtle background */}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -66,13 +85,13 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Contact
           </h2>
-          <p className="text-slate-400 mt-4 text-lg">
+          <p className="text-slate-400 text-lg">
             Let’s connect for data analytics, Power BI projects, or opportunities
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* LEFT SIDE */}
+          {/* LEFT */}
           <div>
             <h3 className="text-2xl font-semibold text-white mb-6">
               Contact Information
@@ -132,7 +151,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE FORM */}
+          {/* RIGHT FORM */}
           <div>
             <form
               onSubmit={handleSubmit}
