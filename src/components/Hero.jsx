@@ -129,7 +129,7 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-blue-500/30 blur-2xl rounded-full"></div>
             <img
-              src="\public\profile.jpg"
+              src="/profile.jpg"
               alt="Mahammad Ubaid"
               className="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl object-cover border border-white/10 shadow-2xl"
             />
